@@ -186,6 +186,8 @@ footer{padding:22px 0 40px;text-align:center;color:#8b93a7;font-size:.84rem}
   .report .full{grid-column:auto}
   .navhint{display:block}
   .score strong{font-size:1.25rem}
+  .ncell{border-radius:6px;font-size:clamp(.68rem,2.7vw,.95rem)}
+  .six .h{font-size:clamp(.5rem,1.8vw,.72rem);overflow-wrap:anywhere}
   canvas{height:230px}
 }
 @media print{
@@ -237,7 +239,7 @@ footer{padding:22px 0 40px;text-align:center;color:#8b93a7;font-size:.84rem}
     <div class="box b-pink"><h4>🙅 하면 안 되는 말</h4><ul><li>"아직 아무도 검증 안 했다" ❌</li><li>"상금 지급까지 확정됐다" ❌</li><li>"AI가 혼자 다 풀었다" ❌</li></ul></div>
   </div>
 
-  <div class="callout info"><b>🔍 "1,700만 줄"은 어떤 뜻일까?</b><br>사람이 쓰는 논문 1,700만 줄이라는 뜻이 아닙니다. 사람이라면 "당연하니까 생략"할 단계까지 하나도 빼지 않고 적은 <b>컴퓨터 검증용 코드</b>라서 이렇게 깁니다. 그래서 컴퓨터는 "맞다"를 확인했지만, 사람이 "왜 맞는지" 이해하려면 시간이 더 필요해요.</div>
+  <div class="callout info"><b>🔍 "1,700만 줄"은 어떤 뜻일까?</b><br>사람이 쓰는 논문 1,700만 줄이라는 뜻이 아닙니다. 사람이 읽는 논문과 컴퓨터가 검사하도록 작성한 코드는 길이를 단순 비교할 수 없어요. 형식 증명에는 세부 논리 단계와 보조 코드 등이 포함될 수 있습니다. 중요한 것은 <b>줄 수보다 무엇을 증명했고 어떻게 검증했는지</b>예요. 컴퓨터가 논리적으로 맞음을 확인한 뒤에도 사람이 핵심 아이디어를 이해하고 설명할 과제는 남아 있어요.</div>
 
   <h3>🗓️ 한눈에 보는 흐름</h3>
   <div class="timeline">
@@ -247,7 +249,7 @@ footer{padding:22px 0 40px;text-align:center;color:#8b93a7;font-size:.84rem}
     <div class="tl" style="--c:#3b82f6"><b class="d">2026.11.21</b>Lean·Mathlib 공동체: "명제와 증명이 모두 올바르다" 공동 성명</div>
     <div class="tl" style="--c:#7c5cd6"><b class="d">앞으로</b>사람의 이해·설명, 학계 평가, 상금 인정 요건 충족 여부</div>
   </div>
-  <div class="callout warn"><b>⚠️ 8월과 11월은 이어진 연구가 아니에요.</b> 나란히 적혀 있으면 "8월 방법을 발전시켜 11월에 풀었다"고 오해하기 쉬워요. 두 연구는 <b>접근법이 다른 별개의 연구</b>입니다.</div>
+  <div class="callout warn"><b>⚠️ 8월과 11월의 발표는 구분해야 해요.</b> 8월에는 일부 영점에 관한 <b>비율의 하한</b>을 개선했고, 11월에는 <b>리만 가설 전체에 대한 형식 증명</b>을 공개했어요. 8월 결과 자체가 전체 증명이었다거나, 그 방법을 그대로 발전시켜 11월의 증명이 나왔다고 단정해서는 안 돼요.</div>
 
   <details class="fold"><summary>🏆 상금 100만 달러는 받을 수 있나요?</summary><div class="body">
     <p>클레이 수학연구소 규칙에 따르면 해답은 ① 인정된 학술 매체에 <b>출판</b>되고, ② 출판 뒤 <b>최소 2년</b>이 지나고, ③ 세계 수학계의 <b>전반적인 인정</b>을 받아야 심사 대상이 됩니다. 그래서 지금 연구소 홈페이지에 '미해결'이라고 적혀 있다는 것이 <b>검증 결과를 부정한다는 뜻은 아닙니다.</b> 공식 절차가 따로 있다는 뜻이에요.</p>
@@ -277,7 +279,7 @@ footer{padding:22px 0 40px;text-align:center;color:#8b93a7;font-size:.84rem}
   <div class="grid3">
     <div class="box b-lemon"><span class="big">① 소수</span><p>2, 3, 5, 7, 11… 1과 자기 자신으로만 나누어지는 수예요. 모든 자연수를 만드는 <b>숫자의 레고 블록</b>이죠. (0.5 같은 '소수점 수'가 아니고, <b>1은 소수가 아니에요.</b>)</p></div>
     <div class="box b-sky"><span class="big">② 소수의 분포</span><p>소수는 들쭉날쭉 나타나요. 그런데 "1부터 x까지 소수가 대략 몇 개?"는 꽤 잘 <b>예측</b>할 수 있어요. 문제는 그 <b>예측이 실제와 얼마나 어긋나느냐</b>예요.</p></div>
-    <div class="box b-pink"><span class="big">③ 리만 가설</span><p>리만은 그 <b>어긋남</b>이 얼마나 작게 유지되는지와 깊이 연결된 수학적 관계를 예측했어요. 이 예측이 맞다면 소수는 "가능한 한 고르게" 흩어져 있다는 뜻이 됩니다.</p></div>
+    <div class="box b-pink"><span class="big">③ 리만 가설</span><p>리만은 그 <b>어긋남</b>이 얼마나 작게 유지되는지와 깊이 연결된 수학적 관계를 예측했어요. 이 가설이 맞다면 실제 소수 개수가 예상값에서 얼마나 벗어날 수 있는지 더 정밀하게 설명할 수 있어요.</p></div>
   </div>
 
   <div class="viz"><svg viewBox="0 0 740 170" role="img" aria-label="소수 블록 2, 3, 5를 곱해 30을 만드는 그림">
@@ -290,7 +292,7 @@ footer{padding:22px 0 40px;text-align:center;color:#8b93a7;font-size:.84rem}
       <text x="550" y="94" font-size="34" fill="#8b93a7">=</text>
       <rect x="578" y="25" width="147" height="110" rx="22" fill="#ffe1ef"/><text x="651" y="96" font-size="44" fill="#b0215f">30</text>
     </g></svg>
-    <p class="tiny" style="text-align:center">모든 자연수(2 이상)는 소수 블록의 곱으로 딱 한 가지 방법으로 만들어져요.</p>
+    <p class="tiny" style="text-align:center">2 이상의 모든 자연수는 소수들의 곱으로 나타낼 수 있어요. <b>곱하는 순서를 같다고 보면</b>, 소수들의 곱으로 나타내는 방법은 딱 하나예요.</p>
   </div>
 
   <div class="callout warn"><b>⚠️ 흔한 오해</b><br>리만 가설은 "다음 소수가 어디에 나올지"를 하나하나 알려 주는 공식이 <b>아닙니다.</b> 소수 개수의 전체적인 흐름과 예측 오차를 이해하는 데 중요한 가설이에요.</div>
@@ -318,7 +320,13 @@ footer{padding:22px 0 40px;text-align:center;color:#8b93a7;font-size:.84rem}
       </g></svg>
       <p class="tiny">개념도입니다. 점의 실제 높이·간격은 반영하지 않았어요. 첫 번째 비자명한 영점은 약 1/2 + 14.13i입니다. 줄 위에 놓이는 것은 '소수 자체'가 아니라 '제타 함수의 비자명한 영점'이에요.</p>
     </div>
-    <p class="small">✏️ 제타 함수의 원래 모양 1 + 1/2ˢ + 1/3ˢ + … 은 s가 1보다 큰 실수일 때만 하나의 값으로 모입니다(수렴). 리만 가설의 영점은 이 함수를 복소수 전체로 넓힌(해석적 연장) 영역에서 나와요.</p>
+    <p class="small">✏️ 제타 함수의 원래 모양 1 + 1/2ˢ + 1/3ˢ + … 은 s가 1보다 큰 실수일 때만 하나의 값으로 모입니다(수렴). 리만 가설에서 다루는 영점은 이 함수를 더 넓은 복소수 영역으로 확장해 연구할 때 나와요. 다만 s = 1에서는 유한한 함수값이 없어요.</p>
+  </div></details>
+
+  <details class="fold"><summary>🔍 더 알아보기: 오일러 곱은 무엇인가요? (심화 선택)</summary><div class="body">
+    <p>자연수 <b>각각의 거듭제곱 역수</b>를 더하는 식과, <b>소수마다 만든 특별한 항</b>을 곱하는 식이 같아진다는 관계예요. 단순히 1+2+3+…을 더한다는 뜻은 아니에요.</p>
+    <div class="formula" style="font-size:clamp(.9rem,3.4vw,1.2rem);overflow-x:auto;white-space:nowrap;padding:8px">1 + 1/2ˢ + 1/3ˢ + ⋯ = ∏(1 / (1 − p⁻ˢ))</div>
+    <p class="small">오른쪽의 ∏ 기호는 모든 <b>소수 p</b>에 대해 곱한다는 뜻이에요. 왼쪽의 n도 1, 2, 3, … 모든 자연수를 뜻해요. 이 등식은 실수 <b>s &gt; 1</b>에서 성립해요. 어려우면 수식은 건너뛰고 두 종류의 식이 연결된다는 사실만 기억하세요.</p>
   </div></details>
 
   <h3>🗂️ 용어 사전</h3>
@@ -374,7 +382,7 @@ footer{padding:22px 0 40px;text-align:center;color:#8b93a7;font-size:.84rem}
   <div class="controls"><button class="btn soft" id="sixShow">소수 보기</button><button class="btn ghost" id="sixCol">6k±1 줄 표시</button></div>
   <div class="six" id="sixGrid"></div>
   <div class="result" id="sixMsg" aria-live="polite">칸을 눌러 보세요. 25나 35를 눌러 보면 재미있어요!</div>
-  <p class="small">💡 6의 배수 옆(6k−1, 6k+1)에 있다는 것은 소수의 <b>필요조건</b>일 뿐 <b>충분조건</b>은 아니에요. 25 = 5×5처럼 줄 위에 있어도 소수가 아닌 수가 있으니까요.</p>
+  <p class="small">💡 <b>3보다 큰 자연수</b>가 소수이려면 6의 배수 바로 앞이나 뒤(6k−1, 6k+1)에 있어야 해요. 하지만 그 자리에 있다고 반드시 소수는 아니에요. 예를 들어 25 = 5×5, 35 = 5×7은 합성수예요. 즉, 6의 배수 옆에 있는 것은 <b>3보다 큰 소수의 필요조건</b>이지만 충분조건은 아니에요.</p>
 
   <h3>실험 5. 40번이나 맞았는데도 틀렸다고?</h3>
   <p>아래 식은 <b>n = 0부터 39까지 40번 연속 소수</b>를 만들어요. 그럼 영원히 맞을까요?</p>
@@ -398,6 +406,7 @@ footer{padding:22px 0 40px;text-align:center;color:#8b93a7;font-size:.84rem}
 <section id="topics" class="card">
   <span class="tag t-lemon">🔎 내가 고르는 탐구</span>
   <h2>탐구 주제 14가지</h2>
+  <p><b>처음에는 실험 1개와 퀴즈부터 시작해 보세요.</b> 더 궁금해진 주제 하나를 골라 보고서로 발전시키면 됩니다.</p>
   <p>모든 주제는 <b>기초 활동</b>에서 시작해요. 심화 활동은 배운 수학 개념에 따라 고르고, <b>도전 읽기</b>는 대학 수준이나 최신 연구를 쉬운 자료로 '소개'하는 활동이에요. 하나만 골라도 충분해요!</p>
   <div class="levelkey"><span><i class="lv b">기초</i>손계산·관찰·표 만들기</span><span><i class="lv a">심화</i>이유 설명·증명·프로그램 비교</span><span><i class="lv c">도전 읽기</i>대학 수준 개념·최신 연구 소개</span></div>
 
@@ -418,7 +427,7 @@ footer{padding:22px 0 40px;text-align:center;color:#8b93a7;font-size:.84rem}
   <span class="tag t-grape">📝 탐구 기록</span>
   <h2>내 탐구 보고서 만들기</h2>
   <p>질문 하나를 골라 직접 해 본 뒤 칸을 채워 보세요. <b>정답보다 실제로 확인한 과정</b>이 더 중요해요.</p>
-  <p class="small"><span class="savebadge" id="saveBadge">💾 자동 저장 켜짐</span> 쓴 내용은 서버로 보내지 않고 <b>이 기기의 브라우저에만</b> 저장돼요. 공용 PC라면 다 쓴 뒤 [입력 지우기]를 눌러 주세요. 밴드 앱 안에서는 저장이 안 될 수 있으니 [보고서 복사]를 함께 이용하세요.</p>
+  <p class="small"><span class="savebadge" id="saveBadge">💾 자동 저장 켜짐</span> 쓴 내용은 서버로 보내지 않고 <b>이 기기의 브라우저에만</b> 저장돼요. <b>공용 PC·태블릿에서는 다른 사람이 읽을 수 있으니 반드시 [입력 지우기]를 눌러 주세요.</b> 밴드 앱 안에서는 저장이 안 될 수 있으니 [보고서 복사]를 함께 이용하세요.</p>
   <div class="report">
     <label>① 내가 고른 질문<textarea id="r1" placeholder="예: 3보다 큰 소수는 왜 6의 배수 옆에 있을까?"></textarea></label>
     <label>② 처음 예상<textarea id="r2" placeholder="나는 ...라고 예상했다. 왜냐하면..."></textarea></label>
@@ -626,7 +635,7 @@ $('#nvalue').addEventListener('keydown',e=>{if(e.key==='Enter')calcF()});calcF()
 const QUIZ=[
  {q:'1은 소수일까요?',o:['네, 소수예요','아니요, 소수가 아니에요'],a:1,why:'소수는 1보다 큰 자연수 중에서 찾아요. 가장 작은 소수는 2예요.'},
  {q:'8월의 "67.2%" 발표는 리만 가설의 67.2%를 증명했다는 뜻일까요?',o:['네','아니요'],a:1,why:'임계선 위에 있다고 수학적으로 장담할 수 있는 영점 비율의 최소 보장값(하한)을 높였다는 뜻이에요.'},
- {q:'8월 연구를 발전시켜서 11월의 증명이 나왔을까요?',o:['네, 같은 방법을 이어서 발전시켰어요','아니요, 접근법이 다른 별개의 연구예요'],a:1,why:'앤트로픽은 8월에 그 방법이 리만 가설 증명으로 이어질 것이라 기대하지 않는다고 밝혔어요. 11월은 별개의 작업이에요.'},
+ {q:'8월의 67.2% 발표와 11월의 전체 증명 공개는 같은 성과일까요?',o:['네, 같은 성과예요','아니요, 부분 결과 발표와 전체 증명 발표는 구분해야 해요'],a:1,why:'8월에는 영점 비율의 하한을 개선했어요. 11월에는 리만 가설 전체의 증명 코드가 공개되고 검증됐어요. 두 결과가 같거나 8월 방법이 그대로 11월 증명이 됐다고 단정할 수 없어요.'},
  {q:'11월에는 어떤 일이 있었을까요?',o:['컴퓨터가 검사할 수 있는 증명 코드가 공개되고, 전문가 공동체가 검증 결과를 발표했다','상금 100만 달러가 즉시 지급됐다'],a:0,why:'Lean·Mathlib 공동체가 명제와 증명이 모두 올바르다고 발표했어요. 상금 인정은 출판·2년 경과·수학계 인정이라는 별도 요건이 있어요.'},
  {q:'Lean의 컴퓨터 검증이 보장해 주는 것은?',o:['증명이 논리적으로 맞다는 것','사람들이 증명의 아이디어를 모두 이해했다는 것'],a:0,why:'컴퓨터는 "맞다"를 확인해요. 사람이 "왜 맞는지" 이해하고 설명하는 일은 앞으로 남은 과제예요.'},
  {q:'n² + n + 41은 n = 0부터 39까지 모두 소수예요. n = 40일 때는?',o:['소수 1681','합성수 1681 = 41 × 41'],a:1,why:'40번 맞아도 모든 경우에 맞는 것은 아니에요. 반례 하나로 충분해요.'},
@@ -650,20 +659,20 @@ renderQuiz();
 
 /* ---------- Topics ---------- */
 const TOPICS=[
- {cat:'math',tags:['calc'],name:'소수는 얼마나 드물어질까?',b:'1~100, 1~1,000, 1~10,000의 소수 개수와 비율을 표·그래프로 비교해요(실험 2 활용).',a:'[선수 지식: 로그함수] 실제 소수 개수 π(x)와 예측값 x/ln x를 비교해요. 절대오차(실제 − 예측)와 상대오차(실제 ÷ 예측)를 구분하세요. 예: x = 1,000 → 168 − 144.8 ≈ 23, x = 10,000 → 1,229 − 1,085.7 ≈ 143. 상대오차는 줄어드는 경향이지만 절대오차는 오히려 커질 수 있어요.',out:'소수 개수 표 + 예측·실제 비교 그래프',tip:'π(x)는 원주율이 아니라 "x 이하의 소수 개수"라는 함수 이름이에요.'},
+ {cat:'math',tags:['calc'],name:'소수는 얼마나 드물어질까?',b:'1~100, 1~1,000, 1~10,000의 소수 개수와 비율을 표·그래프로 비교해요(실험 2 활용).',a:'[선수 지식: 로그함수] 실제 소수 개수 π(x)와 예측값 x/ln x를 비교해요. 절대오차는 |실제값 − 예측값|, 실제값을 기준으로 한 상대오차는 절대오차 ÷ 실제값 × 100%예요. x = 1,000에서는 실제 168개·예측 약 144.8개이므로 절대오차 약 23.2개, 상대오차 약 13.8%예요. x = 10,000에서는 실제 1,229개·예측 약 1,085.7개로 절대오차 약 143.3개, 상대오차 약 11.7%예요. 이 두 사례에서는 절대오차는 커졌지만 상대오차는 작아졌어요.',out:'소수 개수 표 + 예측·실제 비교 그래프',tip:'π(x)는 원주율이 아니라 "x 이하의 소수 개수"라는 함수 이름이에요.'},
  {cat:'math',tags:['calc'],name:'소수 사이의 간격과 쌍둥이 소수',b:'100까지 이웃한 소수의 간격을 세고, 간격이 2인 쌍(쌍둥이 소수)을 찾아요(실험 3 활용).',a:'1,000까지 넓혀 간격 분포를 히스토그램으로 그리고, 3 이후 간격이 모두 짝수인 이유를 설명해요. 유일한 예외(2→3, 간격 1)도 함께 설명하세요.',out:'간격 빈도표 + 관찰 문장',tip:'간격이 범위를 따라 무조건 커지기만 하지는 않아요. 큰 수에서도 쌍둥이 소수가 나와요.'},
- {cat:'math',tags:['calc'],name:'3보다 큰 소수는 6의 배수 옆에?',b:'소수를 6으로 나눈 나머지를 기록하고, 25·35처럼 규칙에 맞지만 소수가 아닌 수를 찾아요(실험 4 활용).',a:'모든 정수를 6k, 6k+1, …, 6k+5의 여섯 경우로 나누어, 3보다 큰 소수는 6k±1 꼴일 수밖에 없음을 증명해요.',out:'나머지 분류표 + 필요조건·충분조건 비교',tip:'6k±1은 소수의 필요조건일 뿐, 충분조건이 아니에요.'},
+ {cat:'math',tags:['calc'],name:'3보다 큰 소수는 6의 배수 옆에?',b:'소수를 6으로 나눈 나머지를 기록하고, 25·35처럼 규칙에 맞지만 소수가 아닌 수를 찾아요(실험 4 활용).',a:'모든 정수를 6k, 6k+1, …, 6k+5의 여섯 경우로 나누어, 3보다 큰 소수는 6k±1 꼴일 수밖에 없음을 증명해요.',out:'나머지 분류표 + 필요조건·충분조건 비교',tip:'3보다 큰 소수가 되기 위한 필요조건은 6k±1 꼴이에요. 하지만 이 꼴이라고 모두 소수는 아니에요.'},
  {cat:'math',tags:['calc'],name:'40번 맞았는데도 틀리는 공식',b:'n² + n + 41에 0~5를 넣어 보고, 40을 넣어 반례 1681 = 41 × 41을 찾아요(실험 5 활용).',a:'a가 2 이상의 정수일 때, n² + n + a에 n = a를 넣으면 a² + 2a = a(a + 2)가 돼요. 두 인수 a와 a + 2가 모두 1보다 크므로 합성수예요. 따라서 이런 꼴의 식은 모든 n에서 소수를 만들 수 없어요.',out:'반례 계산표 + 증명과 관찰의 차이',tip:'a = 1이면 1 × 3 = 3으로 소수라서 "a ≥ 2" 조건이 꼭 필요해요. 등식은 n = a를 넣었을 때만 성립해요.'},
- {cat:'math',tags:['calc'],name:'끝없이 더하면 어디로 갈까?',b:'1 + 1/2 + 1/3 + … 와 1 + 1/4 + 1/9 + … 를 엑셀로 10항, 100항, 1,000항까지 더해 비교해요.',a:'[선수 지식: 수열의 극한·급수] 앞의 합(조화급수)은 끝없이 커지고(발산), 뒤의 합은 π²/6 ≈ 1.6449에 다가감(수렴)을 부분합으로 확인해요. 값이 왜 π²/6인지 증명까지 할 필요는 없어요.',c:'오일러 곱(모든 자연수의 합 = 소수만의 곱)과, 제타 함수를 복소수로 넓히는 해석적 연장을 쉬운 자료로 읽고 소개해요.',out:'두 부분합 그래프 + 수렴·발산 설명',tip:'1/nˢ의 무한합은 s > 1인 실수에서만 수렴해요. 리만 가설의 영점은 복소수로 넓힌 함수에서 나와요.'},
+ {cat:'math',tags:['calc'],name:'끝없이 더하면 어디로 갈까?',b:'1 + 1/2 + 1/3 + … 와 1 + 1/4 + 1/9 + … 를 엑셀로 10항, 100항, 1,000항까지 더해 비교해요.',a:'[선수 지식: 수열의 극한·급수] 앞의 합(조화급수)은 끝없이 커지고(발산), 뒤의 합은 π²/6 ≈ 1.6449에 다가감(수렴)을 부분합을 계산해 어떤 값에 가까워지는지 <b>관찰</b>하고, 알려진 수렴·발산 결과와 비교해요. 유한하게 계산한 것만으로 무한급수의 수렴·발산을 증명한 것은 아니에요. π²/6이 되는 이유까지 증명할 필요는 없어요.',c:'오일러 곱은 자연수의 거듭제곱 역수를 더한 식을 소수마다 만든 특별한 항의 곱으로 나타내는 관계예요. 모든 자연수를 그대로 더한다는 뜻은 아니에요. 아래의 선택 설명을 읽고, 제타 함수를 더 넓은 복소수 영역으로 확장하는 해석적 연장도 쉬운 자료로 소개해요.',out:'두 부분합 그래프 + 수렴·발산 설명',tip:'1/nˢ의 무한합은 실수 s > 1일 때 수렴해요(복소수에서는 실수부 > 1). 다른 영역에서는 해석적 연장으로 연구하며, s = 1은 예외예요.'},
  {cat:'math',tags:['calc','ai'],name:'소수 판별은 어디까지 나누어 봐야 할까?',b:'49, 97, 997이 소수인지 직접 나누어 보며 나눗셈 횟수를 비교해요.',a:'합성수 N = a × b에서 두 인수가 모두 √N보다 클 수 없음을 증명하고, 이를 이용해 판별 알고리즘을 개선해요.',out:'나눗셈 횟수 표 + √N까지만 검사하는 이유',tip:'프로그램으로 만들 때는 음수, 1, 소수점 수 같은 입력도 따로 처리해야 해요.'},
  {cat:'ai',tags:['ai'],name:'AI가 만든 소수 판별기 검증하기',b:'AI에게 소수 판별 코드를 요청하고, 1·2·9·25·49·97·2.5의 결과를 미리 예상해 적은 뒤 검사해요.',a:'0~1,000의 모든 수에 대해 다른 판별기와 결과를 자동으로 비교하는 테스트를 만들고, √N 최적화를 적용해요.',out:'검사표 + 오류 수정 전후 기록',tip:'테스트 몇 개를 통과한 것과 수학적으로 증명된 것은 달라요.'},
  {cat:'ai',tags:['ai','calc'],name:'소수로 암호 만들기 (선택형)',b:'61 × 53 = 3233을 계산한 뒤, 친구는 3233만 보고 두 소수를 찾아요. 각각 걸린 시간을 비교해요.',a:'[먼저 배울 것: 나머지 연산] 예시: 7 mod 3 = 1, 2⁵ mod 7 = 32 mod 7 = 4. 이를 익힌 뒤 작은 소수로 RSA 암호화·복호화를 해 보고, 실제 보안에는 훨씬 큰 수와 표준 구현이 필요함을 정리해요.',out:'곱셈·분해 비교 + 암호 과정도',tip:'이 활동은 곱셈과 소인수분해의 차이를 "체험"하는 작은 예시예요. 실제 암호의 안전성을 측정한 실험은 아니에요. 리만 가설이 증명돼도 암호가 즉시 무너지지는 않아요.'},
  {cat:'ai',tags:['ai'],name:'Lean으로 증명 검사 맛보기',b:'"짝수 + 짝수 = 짝수"의 이유를 말로 써 보고, 빠진 논리 단계가 없는지 친구와 서로 점검해요.',a:'Natural Number Game에서 덧셈 명제를 직접 형식 검증해 보고, 증명 검사기와 일반 채팅 AI가 어떻게 다른지 비교해요.',out:'논리 단계 점검표 + Lean 체험 기록',tip:'화면이 영어이고 코드를 입력해야 해요. 번역기를 켜고 1단계부터 천천히 해 보세요. 검증은 적어 넣은 명제가 원래 뜻과 같아야 의미가 있어요.'},
- {cat:'human',tags:['talk'],name:'"리만 가설" 뉴스 제목 팩트체크',b:'8월(67.2% 하한)과 11월(전체 증명 공개·검증) 기사를 나눠 정리하고, 제목에서 사실과 과장을 구분해요.',a:'41.6% → 67.2%가 +25.6%포인트이고 상대 증가율은 약 61.5%임을 계산해 언론 표현을 비교해요. 발표자의 소속과 검증한 사람이 누구인지도 표로 정리해요.',out:'기사 3개 비교표 + 정확한 대체 제목',tip:'67.2%는 영점을 세어 본 비율이 아니라 수학적 최소 보장값이에요.'},
+ {cat:'human',tags:['talk'],name:'"리만 가설" 뉴스 제목 팩트체크',b:'8월(67.2% 하한)과 11월(전체 증명 공개·검증) 기사를 구분해 정리하고, 둘 사이의 연구 방법 관계를 자료 없이 단정한 제목은 없는지 살펴봐요.',a:'41.6% → 67.2%가 +25.6%포인트이고 상대 증가율은 약 61.5%임을 계산해 언론 표현을 비교해요. 발표자의 소속과 검증한 사람이 누구인지도 표로 정리해요.',out:'기사 3개 비교표 + 정확한 대체 제목',tip:'67.2%는 영점을 세어 본 비율이 아니라 수학적 최소 보장값이에요.'},
  {cat:'human',tags:['talk'],name:'AI 시대에 "안다"는 것은 무엇일까?',b:'사람이 다 읽기 힘든 1,700만 줄짜리 증명을 컴퓨터가 검증했다면, 우리는 그것을 "안다"고 할 수 있을지 찬반 토론해요.',a:'1976년 4색 정리의 컴퓨터 보조 증명 사례와 비교하고, 수학적 타당성·사람의 이해·공식 인정을 구분해 정리해요.',out:'근거를 2개씩 담은 토론문',tip:'"수학계 전체가 이해했다"는 표현은 피하고, 검증과 설명의 역할을 구분하세요.'},
  {cat:'human',tags:['talk','calc'],name:'불규칙해 보이는 것 속의 규칙',b:'동전 던지기 결과와 소수가 나타나는 모습을 각각 기록해 비교하고, 둘 다 "불규칙해 보이는데 큰 흐름은 예측 가능한지" 관찰해요.',c:'제타 함수 영점의 간격 통계가 양자역학의 에너지 준위 통계와 닮았다는 연구를 쉬운 자료로 읽고 소개해요.',out:'사례 비교 인포그래픽',tip:'통계가 닮았다고 해서 두 현상이 같은 원리라거나 리만 가설의 증명이 된다는 뜻은 아니에요.'},
  {cat:'math',tags:['calc'],name:'더 큰 소수: 메르센 수 탐험',b:'p = 2, 3, 5, 7, 11에 대해 2ᵖ − 1을 계산하고 소수인지 판정해요. (힌트: 2¹¹ − 1 = 2047 = 23 × 89)',a:'6, 28, 496이 완전수(자기 자신을 뺀 약수의 합 = 자기 자신)인지 직접 확인하고, 메르센 소수와 어떤 관계가 있는지 찾아봐요.',c:'짝수 완전수와 메르센 소수의 관계(유클리드–오일러 정리) 증명을 읽고, 여러 사람의 컴퓨터로 큰 소수를 찾는 GIMPS 프로젝트를 조사해요.',out:'메르센 수 판정표 + 완전수 사례',tip:'p가 소수여도 2ᵖ − 1이 소수가 아닐 수 있어요. 가장 큰 소수 기록은 확인한 날짜에 따라 달라요.'},
- {cat:'human',tags:['talk'],name:'큰 정리가 증명되면 앞선 부분 결과는 쓸모없어질까?',b:'8월의 "최소 67.2%"와 11월의 "전부(100%)"는 어떤 관계인지 생각해 보고, 앞선 연구의 가치를 토론해요.',a:'8월 결과는 영점이 줄 위에 있으면서 중복되지 않는다(단순 영점)는 것까지 포함해요. 리만 가설만으로는 "중복되지 않는다"까지 알 수 없다는 점을 조사해, 부분 결과와 새로운 기법의 가치를 정리해요.',out:'두 결과 비교표 + 내 생각',tip:'11월 증명이 학계에서 최종 인정된다는 것을 전제로 생각하는 활동이에요.'}
+ {cat:'human',tags:['talk'],name:'큰 정리가 증명되면 앞선 부분 결과는 쓸모없어질까?',b:'8월의 "최소 67.2%"와 11월의 "전부(100%)"는 어떤 관계인지 생각해 보고, 앞선 연구의 가치를 토론해요.',a:'8월 결과에는 임계선 위에 있는 단순 영점(중복되지 않는 영점)에 관한 하한도 포함돼요. 리만 가설만으로는 "중복되지 않는다"까지 알 수 없다는 점을 조사해, 부분 결과와 새로운 기법의 가치를 정리해요.',out:'두 결과 비교표 + 내 생각',tip:'11월 증명이 학계에서 최종 인정된다는 것을 전제로 생각하는 활동이에요.'}
 ];
 const list=$('#topicList');let curFilter='all';
 function topicEl(t){
@@ -701,7 +710,7 @@ const SKEY='kyungil-riemann-report-v2';let canSave=true;
 function saveReport(){const data={};RID.forEach(id=>data[id]=document.getElementById(id).value);canSave=store.set(SKEY,JSON.stringify(data));$('#saveBadge').textContent=canSave?'💾 자동 저장됨':'⚠️ 이 브라우저는 자동 저장이 안 돼요. 꼭 복사해 두세요';}
 (function loadReport(){const raw=store.get(SKEY);if(raw){try{const d=JSON.parse(raw);RID.forEach(id=>{if(typeof d[id]==='string')document.getElementById(id).value=d[id]})}catch(e){}}if(!store.set(SKEY+'-test','1')){canSave=false;$('#saveBadge').textContent='⚠️ 이 브라우저는 자동 저장이 안 돼요. 꼭 복사해 두세요'}else store.del(SKEY+'-test')})();
 let st;RID.forEach(id=>document.getElementById(id).addEventListener('input',()=>{clearTimeout(st);st=setTimeout(saveReport,400)}));
-function reportText(){return '리만 가설 뉴스에서 시작한 나의 탐구\n\n'+RID.map((id,i)=>`${i+1}. ${RKEY[i]}\n${document.getElementById(id).value.trim()||'(미작성)'}`).join('\n\n')+'\n\n작성 기준일: 2026-11-23 / 계산 범위와 근거를 함께 기록하세요.'}
+function reportText(){return '리만 가설 뉴스에서 시작한 나의 탐구\n\n'+RID.map((id,i)=>`${i+1}. ${RKEY[i]}\n${document.getElementById(id).value.trim()||'(미작성)'}`).join('\n\n')+'\n\n뉴스 자료 기준일: 2026-11-23 / 계산 범위와 근거를 함께 기록하세요.'}
 async function copyText(t){
   try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(t);return true}}catch(e){}
   const a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.append(a);a.select();
@@ -710,13 +719,21 @@ async function copyText(t){
 function setStatus(el,ok,msgOk,msgErr){el.textContent=ok?msgOk:msgErr;el.classList.toggle('err',!ok)}
 $('#copyReport').onclick=async()=>setStatus($('#reportStatus'),await copyText(reportText()),'✅ 복사했어요! 원하는 곳에 붙여 넣으세요.','⚠️ 복사가 막혔어요. 칸의 글을 길게 눌러 직접 복사해 주세요.');
 $('#downloadReport').onclick=()=>{try{const blob=new Blob(['﻿'+reportText()],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='리만가설_나의탐구보고서.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);setStatus($('#reportStatus'),true,'💾 저장을 시작했어요. 안 되면 [보고서 복사]를 이용하세요.','')}catch(e){setStatus($('#reportStatus'),false,'','⚠️ 이 브라우저에서는 파일 저장이 안 돼요. [보고서 복사]를 이용하세요.')}};
+let printFallback;
+function clearPrintMode(){clearTimeout(printFallback);document.body.classList.remove('print-report')}
+window.addEventListener('afterprint',clearPrintMode);
 $('#printReport').onclick=()=>{
   const pa=$('#printArea');pa.replaceChildren();const h=document.createElement('h1');h.textContent='리만 가설 뉴스에서 시작한 나의 탐구';pa.append(h);
   RID.forEach((id,i)=>{const h3=document.createElement('h3');h3.textContent=(i+1)+'. '+RKEY[i];const p=document.createElement('p');p.textContent=document.getElementById(id).value.trim()||'(미작성)';pa.append(h3,p)});
-  const f=document.createElement('p');f.textContent='작성 기준일: 2026-11-23 · 창원경일고';pa.append(f);
-  document.body.classList.add('print-report');try{window.print()}catch(e){}setTimeout(()=>document.body.classList.remove('print-report'),800);
+  const f=document.createElement('p');f.textContent='뉴스 자료 기준일: 2026-11-23 · 창원경일고';pa.append(f);
+   document.body.classList.add('print-report');
+   // '인쇄/PDF' 화면은 모바일에서 늦게 열릴 수 있어요. 인쇄 완료 신호를 우선 사용합니다.
+   clearTimeout(printFallback);
+   printFallback=setTimeout(clearPrintMode,15000);
+   try{window.print()}catch(e){clearPrintMode();setStatus($('#reportStatus'),false,'','⚠️ 인쇄 화면을 열지 못했어요. 보고서 복사를 이용하세요.');}
+
 };
-$('#resetReport').onclick=()=>{if(confirm('작성한 모든 내용을 지울까요? 이 기기에 저장된 내용도 함께 지워져요.')){RID.forEach(id=>document.getElementById(id).value='');store.del(SKEY);setStatus($('#reportStatus'),true,'🧹 입력 내용과 저장된 내용을 지웠어요.','')}};
+$('#resetReport').onclick=()=>{if(confirm('작성한 모든 내용을 지울까요? 이 기기에 저장된 내용도 함께 지워져요.')){clearTimeout(st);RID.forEach(id=>document.getElementById(id).value='');store.del(SKEY);setStatus($('#reportStatus'),true,'🧹 입력 내용과 저장된 내용을 지웠어요.','')}};
 
 /* ---------- Band ---------- */
 const BAND=`🔢 [경일 시사탐구] 167년 된 수학 수수께끼, 드디어 풀렸을까?
@@ -729,7 +746,7 @@ const BAND=`🔢 [경일 시사탐구] 167년 된 수학 수수께끼, 드디어
 ❓ 리만 가설이 뭐예요?
 2, 3, 5, 7처럼 1과 자기 자신으로만 나누어지는 수가 '소수'예요. 1859년 수학자 리만은 소수가 얼마나 고르게 퍼져 있는지와 깊이 연결된 추측을 남겼어요. 이것이 리만 가설이에요.
 
-📌 참고: 8월에 나온 '67.2%' 소식은 이번 증명과는 별개의 연구예요.
+📌 참고: 8월의 '67.2% 하한 개선'과 11월의 '전체 증명 공개'는 서로 다른 성과예요. 연구 방법의 직접적인 연결 관계를 단정할 수는 없어요.
 
 🧪 여러분도 해 볼 수 있어요
 ① 1~100의 소수를 색칠하고 채점받기
